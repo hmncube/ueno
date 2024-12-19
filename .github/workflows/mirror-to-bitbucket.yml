@@ -1,0 +1,17 @@
+# .github/workflows/mirror-to-bitbucket.yml
+name: Mirror to Bitbucket
+on: [push, delete]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Mirror to Bitbucket
+        uses: pixta-dev/repository-mirroring-action@v1
+        with:
+          target_repo_url: https://${{ secrets.BITBUCKET_USERNAME }}:${{ secrets.BITBUCKET_APP_PASSWORD }}@bitbucket.org/${{ secrets.BITBUCKET_REPO_OWNER }}/${{ secrets.BITBUCKET_REPO_NAME }}.git
