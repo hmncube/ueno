@@ -4,7 +4,7 @@
 
 an aural experience of the very excellent [yamanote line](https://en.wikipedia.org/wiki/Yamanote_Line)
 
-## Creating release builds #TODO REMOVE
+## Creating release builds #TODO REMOVE NOW
 
 ### Play Store
 
